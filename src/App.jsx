@@ -9,16 +9,17 @@ import Songs from './Songs.jsx'
 
 export default function App() {
   
-  const [ rangeInput, setRangeInput ] = useState()
-  const [ range, setRangeSubmit ] = useState()
+  const [ messageInput, setMessage ] = useState()
+  const [ message, setSubmit ] = useState()
   
   const handleInput = (e) => {
-    setRangeInput(e.target.value)
+    setMessage(e.target.value)
   }
   const handleSubmit = (e) => {
     e.preventDefault()
-    setRangeSubmit(rangeInput)
-    setRangeInput('')
+    setSubmit(messageInput)
+    setMessage('')
+
   }
 
   return (
@@ -31,17 +32,17 @@ export default function App() {
                             United Kingdom, where they were seen as the heir apparent to 
                             the throne left vacant by Oasis and the Libertines."/>
       <h2>ID 1 - 6</h2>
-      <p>Number: {range}</p>
+      <p>{message}</p>
       <form>
         <input 
           type="text"
-          value={rangeInput}
+          value={messageInput}
           onChange={handleInput}
         />
         <button
           type='submit'
           onClick={handleSubmit}
-        >Find</button>
+        >Post</button>
       </form>
       <h2>Some of there Songs which i like</h2>
       <Songs />
