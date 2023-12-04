@@ -91,3 +91,11 @@
     width: 150px;
     height: 150px;
 }
+
+.like{
+    color: grey;
+}
+
+.like.is-liked{
+    color: red;
+}
