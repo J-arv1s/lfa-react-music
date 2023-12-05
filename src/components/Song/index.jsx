@@ -1,12 +1,11 @@
-
 import React from 'react'
 import { useState } from 'react'
 
-import coverArtFWN from './assets/FWNcover.png'
-import coverArt5AM from './assets/5AMcover.png'
-import coverArtBrian from './assets/Briancover.png'
-import coverArtSunGoesDown from './assets/SunGoesDowncover.png'
-import coverArtWanaKnow from './assets/WanaKnowcover.png'
+import coverArtFWN from '../../assets/FWNcover.png'
+import coverArt5AM from '../../assets/5AMcover.png'
+import coverArtBrian from '../../assets/Briancover.png'
+import coverArtSunGoesDown from '../../assets/SunGoesDowncover.png'
+import coverArtWanaKnow from '../../assets/WanaKnowcover.png'
 
 import { FaHeart } from "react-icons/fa";
 
@@ -47,7 +46,7 @@ const songs = [{
     releaseDate: '18-06-2013'
 }]
 
-export default function Songs() {
+const Song = () => {
     
     const [isLiked, setIsLiked] = useState({});
 
@@ -77,3 +76,5 @@ export default function Songs() {
         <ol>{listSongs}</ol>
     )
 }
+
+export default Song

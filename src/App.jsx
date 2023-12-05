@@ -1,13 +1,12 @@
-
-import React from 'react'
-import { useState } from 'react'
+// rafce
+import React, { useState } from 'react'
+import { Artist, Song } from './components'
 
 import bandLogo from './assets/arcticmonkey.png'
 
-import Artist from './Artist.jsx'
-import Songs from './Songs.jsx'
+import './App.css'
 
-export default function App() {
+const App = () => {
   
   const [ messageInput, setMessage ] = useState()
   const [ message, setSubmit ] = useState()
@@ -45,15 +44,9 @@ export default function App() {
         >Post</button>
       </form>
       <h2>Some of there Songs which i like</h2>
-      <Songs />
+      <Song />
     </>
   )
 }
 
-// const [count, setCount] = useState(0)
-{/* <button onClick={() => setCount((count) => count + 1)}>
-count is {count}
-</button>
-<p>
-Edit <code>src/App.jsx</code> and save to test HMR
-</p> */}
+export default App
