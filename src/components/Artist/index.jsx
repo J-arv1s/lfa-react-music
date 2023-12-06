@@ -1,9 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
 
-import PropTypes from 'prop-types'
+import bandLogo from '../../assets/arcticmonkey.png'
 
-const Artist = (props) => {
+const Artist = () => {
 
     const [ isFlipped, setIsFlipped ] = useState(false)
     const handleFlipped = () => {
@@ -15,31 +15,21 @@ const Artist = (props) => {
             <div className='card-outline'>
                 <div onClick={handleFlipped} className={`card ${isFlipped ? 'is-flipped':''}`}>
                     <div className='front'>
-                        <img src={props.bandLogo} alt='Band logo' aria-label={`Artist logo for ${props.name}`} className='artist-logo'/>
+                        <img src={bandLogo} alt='Band logo' aria-label={`Artist logo for ARCTIC MONKEYS`} className='artist-logo'/>
                     </div>
                     <div className='back'>
-                        <h2 className='artist-name'>Artist: {props.name}</h2>
-                        <h3 className='artist-genre'>Music Genre: {props.genre}</h3>
-                        <p className='artist-text'> Bio: {props.text}</p>
+                        <h2 className='artist-name'>Artist: ARCTIC MONKEYS</h2>
+                        <h3 className='artist-genre'>Music Genre: Rock</h3>
+                        <p className='artist-text'> Bio: With their nervy and literate indie rock sound, Arctic Monkeys 
+                            arrived with a blast in 2005. Assisted by rave reviews and online 
+                            word of mouth, they quickly became a sensation in the 
+                            United Kingdom, where they were seen as the heir apparent to 
+                            the throne left vacant by Oasis and the Libertines.</p>
                     </div>
                 </div>
             </div>
         </>
     )
-}
-
-Artist.propTypes = {
-    name: PropTypes.string,
-    genre: PropTypes.string,
-    text: PropTypes.string,
-    bandLogo: PropTypes.string
-}
-Artist.defaultProps = {
-    name: 'Anonymous',
-    genre: 'Un-disclosed',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, \
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua \
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco.'
 }
 
 export default Artist
